@@ -1,6 +1,5 @@
-// src/components/Products.js
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';  // Import Link for routing
+import { Link } from 'react-router-dom';
 import ProductCard from './ProductCard';
 import data from '../data';
 import './ProductCard.css';
@@ -23,12 +22,10 @@ function Products({cartItems, setCartItems, showFilter = false, showBrowseButton
         const productInCart = prevCart.find((item) => item.id === product.id);
   
         if (productInCart) {
-          // If product already exists in the cart, increase its quantity
           return prevCart.map((item) =>
             item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
           );
         } else {
-          // Add the new product with quantity 1
           return [...prevCart, { ...product, quantity: 1 }];
         }
       });

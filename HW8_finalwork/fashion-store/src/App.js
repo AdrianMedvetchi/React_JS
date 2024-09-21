@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MenuBar from './htmlComponents/MenuBar';
@@ -6,8 +5,8 @@ import Heading from './htmlComponents/Heading';
 import Category from './htmlComponents/Category';
 import Products from './components/Products';
 import Footer from './htmlComponents/Footer';
-import Catalog from './components/Catalog';  // Catalog page component
-import Cart from './components/Cart';  // Cart page component
+import Catalog from './components/Catalog'; 
+import Cart from './components/Cart';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -26,9 +25,9 @@ function App() {
                 <Category />
                 <Products
                   cartItems={cartItems}
-                  setCartItems={setCartItems}  // Pass cart management functions
-                  showFilter={false}  // Disable filtering on the main page
-                  showBrowseButton={true}  // Show Browse All Products button here
+                  setCartItems={setCartItems} 
+                  showFilter={false} 
+                  showBrowseButton={true} 
                 />
                 <Footer />
               </>
@@ -42,8 +41,8 @@ function App() {
               <Products
                 cartItems={cartItems}
                 setCartItems={setCartItems}
-                showFilter={true}  // Enable filtering on the catalog page
-                showBrowseButton={false}  // Hide Browse All Products button
+                showFilter={true} 
+                showBrowseButton={false} 
               />
             }
           />

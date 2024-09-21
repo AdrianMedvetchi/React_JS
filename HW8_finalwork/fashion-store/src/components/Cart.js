@@ -1,9 +1,7 @@
-// src/components/Cart.js
 import React, { useState } from 'react';
-import './Cart.css'; // We'll create this file for custom styling
+import './Cart.css'; 
 
 function Cart({ cartItems, setCartItems }) {
-  // Function to update the quantity of items in the cart
   const updateQuantity = (id, quantity) => {
     setCartItems((prevItems) =>
       prevItems.map((item) =>
@@ -12,12 +10,10 @@ function Cart({ cartItems, setCartItems }) {
     );
   };
 
-  // Function to remove an item from the cart
   const removeItem = (id) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
-  // Function to calculate the total price
   const calculateTotal = () => {
     return cartItems.reduce(
       (total, item) => total + item.price * item.quantity,
@@ -29,7 +25,6 @@ function Cart({ cartItems, setCartItems }) {
     <div className="cart">
       <h2 className="cart-title">Shopping Cart</h2>
 
-      {/* Check if the cart is empty */}
       {cartItems.length === 0 ? (
         <p>Your cart is empty</p>
       ) : (
@@ -81,7 +76,6 @@ function Cart({ cartItems, setCartItems }) {
         </div>
       )}
 
-      {/* Display Grand Total */}
       {cartItems.length > 0 && (
         <div className="cart-summary">
           <h3>Grand Total: ${calculateTotal().toFixed(2)}</h3>

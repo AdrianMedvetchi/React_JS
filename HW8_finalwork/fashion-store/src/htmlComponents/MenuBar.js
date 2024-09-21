@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import '../CSS/MenuBar.css'; // Import CSS specific to MenuBar
+import { Link } from 'react-router-dom';
+import '../CSS/MenuBar.css'; 
 
 function MenuBar({ cartItems }) {
   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);

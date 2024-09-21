@@ -43,9 +43,9 @@
   left: 0;
   width: 360px;
   height: 420px;
-  background-color: rgba(0, 0, 0, 0.5); /* Transparent gray cover */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease; /* Smooth transition */
+  background-color: rgba(0, 0, 0, 0.5); 
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +57,7 @@
 }
 
 .card:hover .overlay {
-  opacity: 1; /* Show overlay on hover */
+  opacity: 1; 
 }
 
 .add-to-cart {
@@ -72,7 +72,7 @@
   background-color: transparent;
   color: white;
   cursor: pointer;
-  z-index: 1; /* Ensure button is on top */
+  z-index: 1; 
 }
 
 .info {

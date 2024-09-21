@@ -1,4 +1,3 @@
-// src/components/ProductCard.js
 import React from 'react';
 import './ProductCard.css';
 
@@ -11,7 +10,6 @@ function ProductCard({ product, addToCart }) {
         <p className="card_description">{product.description}</p>
         <p className="card_price">${product.price.toFixed(2)}</p>
         <div className="overlay">
-          {/* Add to Cart Button */}
           <button className="add-to-cart" onClick={() => addToCart(product)}>
             Add to Cart
           </button>
