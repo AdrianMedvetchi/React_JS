@@ -1,0 +1,168 @@
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 276px;
+}
+
+.products_description {
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.products_title {
+  font-size: 30px;
+  color: #222;
+}
+
+.products_subtitle {
+  font-size: 14px;
+  color: #9f9f9f;
+}
+
+.wrapper {
+  margin-top: 48px;
+  margin-bottom: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 420px;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent gray cover */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_img {
+  width: 360px;
+  height: 420px;
+}
+
+.card:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.add-to-cart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 11px;
+  width: 139px;
+  height: 44px;
+  padding-left: 11px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  z-index: 1; /* Ensure button is on top */
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #eeeeee;
+  width: 360px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.card_title {
+  font-size: 18px; 
+  color: #000; 
+  margin-left: 20px;
+}
+
+.card_content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card_description {
+  font-size: 14px; 
+  color: #555;
+  margin-left: 20px;
+}
+
+.card_price {
+  font-size: 16px; 
+  color: #f16d7f; 
+  margin-left: 20px;
+}
+
+.btn {
+  width: 212px;
+  height: 48px;
+  background-color: #ffffff;
+  color: #f16d7f; 
+  border: #f26376 solid 1px;
+  cursor: pointer; 
+  margin-bottom: 95px;
+}
+
+.btn:hover {
+  background-color: #f26376;
+  color: #ffffff;
+}
+
+.center {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Filter Menu Styling */
+.filter-menu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #f16d7f; /* Light Red for Hover */
+  color: white;
+}
+
+.filter-btn.active {
+  background-color: #f16d7f; /* Active button background */
+  color: white;
+  border: 1px solid #f16d7f; /* Change the border color for active button */
+}
